@@ -1,51 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Starter Template - Materialize</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>Starter Template - Materialize</title>
 
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/styleMat.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-  <nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+<nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo center">Lecteur de vidéo</a>
     </div>
-  </nav>
-  <div class="container">
-      <div class="col s12 m7">
-          <h2 class="header">Horizontal Card</h2>
-          <div class="card horizontal">
-              <div class="card-image">
-                  <img src="https://lorempixel.com/100/190/nature/6">
-              </div>
-              <div class="card-stacked">
-                  <div class="card-content">
-                      <p>I am a very simple card. I am good at containing small bits of information.</p>
-                  </div>
-                  <div class="card-action">
-                      <a href="#">This is a link</a>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+</nav>
+<div class="container">
+    <video class="responsive-video ">
+        <source src="videos/My%20Man!.mp4" type="video/mp4">
+    </video>
+    <div class="controleur"><span>play</span></div>
+</div>
 
+<!--  Scripts-->
+<script src="js/script.js"></script>
 
-
-  <!--  Scripts-->
-  <script src="js/script.js"></script>
-
-  </body>
+</body>
 </html>
