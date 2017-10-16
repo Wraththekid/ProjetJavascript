@@ -1,0 +1,38 @@
+.controleur {
+  margin: 5px auto 5px auto;
+  text-align: center;
+  width: 60%;
+}
+.shadowed {
+  -webkit-box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.42);
+  -moz-box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.42);
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.42);
+}
+.reponsive-video {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  -webkit-box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.42);
+  -moz-box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.42);
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.42);
+}
+.reponsive-video .progress {
+  margin: 0 auto 0 auto;
+}
+.reponsive-video .btn-floating {
+  -webkit-transition: ease 1s;
+  -moz-transition: ease 1s;
+  -ms-transition: ease 1s;
+  -o-transition: ease 1s;
+  transition: ease 1s;
+  background-color: #F44336 !important;
+}
+.reponsive-video .btn-floating:hover {
+  background-color: #4dd0e1 !important;
+}
+.reponsive-video video {
+  margin-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+}

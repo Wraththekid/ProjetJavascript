@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/styleMat.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="scss/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
 <nav>
@@ -18,10 +18,21 @@
     </div>
 </nav>
 <div class="container">
-    <video class="responsive-video ">
-        <source src="videos/My%20Man!.mp4" type="video/mp4">
-    </video>
-    <div class="controleur"><span>play</span></div>
+    <div class="reponsive-video">
+        <video id="videoPlayed" class="responsive-video">
+            <source src="videos/My%20Man!.mp4" type="video/mp4">
+        </video>
+        <div id="progression" class="progress">
+            <div class="determinate" style="width: 70%"></div>
+        </div>
+        <div class="controleur">
+            <button href="#" id="prev" class="btn-floating waves-effect waves-light"><i class="material-icons">skip_previous</i></button>
+            <button href="#" id="prevTen" class="btn-floating waves-effect waves-light"><i class="material-icons">navigate_before</i></button>
+            <button href="#" id="playPause" class="btn-floating waves-effect waves-light"><i id="playPauseIcn" class="material-icons">play_arrow</i></button>
+            <button href="#" id="nextTen" class="btn-floating waves-effect waves-light"><i class="material-icons">navigate_next</i></button>
+            <button href="#" id="next" class="btn-floating waves-effect waves-light"><i class="material-icons">skip_next</i></button>
+        </div>
+    </div>
 </div>
 
 <!--  Scripts-->
