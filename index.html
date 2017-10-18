@@ -18,13 +18,14 @@
     </div>
 </nav>
 <div class="container">
-    <div class="reponsive-video">
+    <div id="cadreVideo" class="reponsive-video">
         <video id="videoPlayed" class="responsive-video">
             <source src="videos/My%20Man!.mp4" type="video/mp4">
         </video>
         <div id="progression" class="progress">
-            <div class="determinate" style="width: 70%"></div>
+            <div id="progressionBar" class="determinate" style="width: 0%"></div>
         </div>
+        <div class="time"></div>
         <div class="controleur">
             <button href="#" id="prev" class="btn-floating waves-effect waves-light"><i class="material-icons">skip_previous</i></button>
             <button href="#" id="prevTen" class="btn-floating waves-effect waves-light"><i class="material-icons">navigate_before</i></button>

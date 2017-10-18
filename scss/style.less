@@ -1,7 +1,9 @@
+@smartphones: ~"(max-width: 479px)";
+
 .controleur{
   margin: 5px auto 5px auto;
   text-align: center;
-  width:60%;
+  width:80%;
 }
 
 .shadowed{
@@ -15,6 +17,14 @@
   .shadowed;
   .progress{
     margin: 0 auto 0 auto;
+    border-radius: 0;
+    background-color: #ffc5b8;
+    padding-bottom: 10px;
+    cursor: pointer;
+    .determinate{
+      border-radius: 0;
+      background-color: #8b1014;
+    }
   }
   .btn-floating{
     -webkit-transition: ease 1s;
@@ -25,7 +35,17 @@
     background-color: #F44336 !important;
   }
   .btn-floating:hover{
-    background-color: #4dd0e1 !important;
+    background-color: #ff8c0f !important;
+  }
+  .time{
+    position: relative;
+    margin-right:5%;
+    margin-left: auto;
+    width:10%;
+    font-size: smaller;
+    @media @smartphones{
+      margin-right: 10%;
+    }
   }
   video{
     margin-top: 10px;
@@ -33,5 +53,11 @@
     margin-left: auto;
     margin-right: auto;
     width: auto;
+  }
+}
+
+.nav-wrapper{
+  .brand-logo{
+    width: 80%;
   }
 }
