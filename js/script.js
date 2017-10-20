@@ -7,6 +7,12 @@ function init() {
     document.getElementById("videoPlayed").addEventListener("timeupdate", update);
     document.getElementById("progression").addEventListener("click", changeTime);
 
+    var i;
+    for(i=0;i<document.getElementsByClassName("collection").length;i++)
+    {
+        document.getElementsByClassName("collection")[i].addEventListener("click", loadVideo);
+    }
+
     video = document.getElementById("videoPlayed");
     playPauseIcn = document.getElementById("playPauseIcn");
     console.log(document.getElementById("cadreVideo").offsetWidth);
@@ -20,6 +26,10 @@ window.addEventListener("load", init);
 window.addEventListener("resize", function () {
     document.getElementById("progression").style.width = video.offsetWidth+'px';
 });
+
+function loadVideo(event) {
+
+}
 
 function playPause()
 {

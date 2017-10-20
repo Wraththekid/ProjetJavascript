@@ -56,6 +56,26 @@
   margin-right: auto;
   width: auto;
 }
+.playlist-container {
+  margin-top: 20px;
+  margin-right: -5%;
+  margin-left: -5%;
+}
+.playlist-container .nav-wrapper {
+  margin-bottom: 2%;
+}
+.playlist-container .collection {
+  cursor: pointer;
+  margin: 1% 0 0 0;
+  transition: ease 0.5s;
+}
+.playlist-container .collection:hover {
+  -webkit-transform: scale(1.1, 1.1);
+  -moz-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  -o-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+}
 .nav-wrapper .brand-logo {
   width: 80%;
 }
