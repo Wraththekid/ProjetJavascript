@@ -7,10 +7,9 @@ function init() {
     document.getElementById("videoPlayed").addEventListener("timeupdate", update);
     document.getElementById("progression").addEventListener("click", changeTime);
 
-    var i;
-    for(i=0;i<document.getElementsByClassName("collection").length;i++)
+    for(var i=0;i<collection.length;i++)
     {
-        document.getElementsByClassName("collection")[i].addEventListener("click", loadVideo);
+        collection[i].addEventListener("click", loadEvent);
     }
 
     video = document.getElementById("videoPlayed");
@@ -20,15 +19,35 @@ function init() {
     document.getElementById("progression").style.width = video.offsetWidth+'px';
     update();
 }
+
+
+var collection = document.getElementsByClassName("collection");
 var videoPlay=false;
 var heuresTot, minutesTot, secondesTot, heures, minutes, secondes;
+var currentVideo = 0;
+
+
 window.addEventListener("load", init);
 window.addEventListener("resize", function () {
     document.getElementById("progression").style.width = video.offsetWidth+'px';
 });
 
-function loadVideo(event) {
+function loadEvent(event) {
+     loadVideo(event.target.parentNode.id);
+     for(var i=0;i<collection.length;i++)
+     {
+        if(collection[i].id === event.target.parentNode.id)
+        {
+            currentVideo = i;
+        }
+     }
+     console.log(currentVideo);
+}
 
+function loadVideo(src) {
+    video.firstElementChild.src = src;
+    video.load();
+    setTimeout(update, 50);
 }
 
 function playPause()
@@ -51,10 +70,23 @@ function playPause()
 }
 
 function prev() {
-    video.currentTime = 0;
-    video.pause();
-    videoPlay = false;
-    playPauseIcn.textContent = "play_arrow";
+    if(video.currentTime === 0){
+        if(currentVideo > 0)
+        {
+            currentVideo--;
+        }else
+        {
+            currentVideo = collection.length-1;
+        }
+        loadVideo(collection[currentVideo].id);
+    }else
+    {
+        video.currentTime = 0;
+        video.pause();
+        videoPlay = false;
+        playPauseIcn.textContent = "play_arrow";
+    }
+    console.log(currentVideo);
 }
 
 function prevTen() {
@@ -66,6 +98,16 @@ function nextTen() {
 }
 
 function next() {
+    if(collection.length>currentVideo+1)
+    {
+        currentVideo++;
+    }else
+    {
+        currentVideo=0;
+    }
+    videoPlay = false;
+    playPauseIcn.textContent = "play_arrow";
+    loadVideo(collection[currentVideo].id);
 
 }
 
