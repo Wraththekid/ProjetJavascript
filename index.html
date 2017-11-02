@@ -35,28 +35,56 @@
         </div>
     </div>
     <div class="playlist-container">
-        <div class="nav-pers">
-            <ul class="left">
-                <li><a><i class="material-icons">playlist add</i></a></li>
-            </ul>
-        </div>
 
-        <ul class="collection" id="videos/My%20Man!.mp4">
-            <li class="collection-item avatar">
-                <i class="material-icons circle">folder</i>
-                <span class="title">Title</span>
-                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-            </li>
-        </ul>
-        <ul class="collection" id="videos/Revoilà%20la%20pub-Palmashow.mp4">
-            <li class="collection-item avatar" id="">
-                <i class="material-icons circle">folder</i>
-                <span class="title">Title</span>
-                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-            </li>
-        </ul>
+        <div class="row">
+            <div class="col s6 m3">
+                <div class="card item">
+                    <div class="card-image">
+                        <video class="responsive-video">
+                            <source src="videos/My%20Man!.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" id="videos/My%20Man!.mp4"><i class="loadBtn material-icons">play_arrow</i></a>
+                        <a href="#"><i class="deleteBtn material-icons">delete_forever</i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s6 m3">
+                <div class="card item">
+                    <div class="card-image">
+                        <video class="responsive-video">
+                            <source src="videos/Revoilà%20la%20pub-Palmashow.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" id="videos/Revoilà%20la%20pub-Palmashow.mp4"><i class="loadBtn material-icons">play_arrow</i></a>
+                        <a href="#"><i class="deleteBtn material-icons">delete_forever</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m12">
+            <a class="btn-floating btn-large waves-effect red centerA scale-transition" id="addButton"><i class="material-icons">add</i></a>
+        </div>
+        <div class="col s12 m12 scale-transition scale-out" id="add">
+            <div class="card">
+                <div class="card-content">
+                    <div class="input-field">
+                        <input id="icon_prefix" type="text" class="validate" placeholder="url">
+                    </div>
+                </div>
+                <div class="card-action">
+                    <a href="#addButton" id="addAjouter">Ajouter</a>
+                    <a href="#addButton" id="addAnnuler">Annuler</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+<footer>
+
+</footer>
 
 <!--  Scripts-->
 <script src="js/script.js"></script>

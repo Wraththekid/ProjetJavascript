@@ -68,13 +68,27 @@
     height: 64px;
     background-color: #ee6e73;
     color: #fff;
+    ul{
+      margin: 0;
+      height: 64px;
+      li{
+        height: 64px;
+        i{
+          margin: auto 0 auto 0;
+        }
+      }
+    }
   }
-  .collection{
+  .item{
     cursor: pointer;
-    margin: 1% 0 0 0;
-    transition: ease 0.5s;
+    margin: 0;
+    transition: ease 0.3s;
+    .card-image{
+      margin:0;
+      padding: 0;
+    }
   }
-  .collection:hover{
+  .item:hover{
     -webkit-transform: scale(1.1, 1.1);
     -moz-transform: scale(1.1, 1.1);
     -ms-transform: scale(1.1, 1.1);
@@ -87,4 +101,33 @@
   .brand-logo{
     width: 80%;
   }
+}
+
+div{
+  .centerA{
+    margin-top: 20px;
+    margin-left: 45%;
+  }
+}
+
+
+
+.animation-target {
+  -webkit-animation: animation 2000ms linear both;
+  animation: animation 2000ms linear both;
+}
+.item{
+  .card-action{
+    padding: 0;
+    padding-left: 30%;
+    border: 0;
+  }
+}
+
+.played{
+  -webkit-transform: scale(1.1, 1.1);
+  -moz-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  -o-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
 }
