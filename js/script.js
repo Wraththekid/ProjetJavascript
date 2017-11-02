@@ -21,6 +21,7 @@ function init() {
     }
 
     video = document.getElementById("videoPlayed");
+    video.addEventListener("click", playPause);
     playPauseIcn = document.getElementById("playPauseIcn");
     console.log(document.getElementById("cadreVideo").offsetWidth);
     collection[0].classList.add("played");
